@@ -1,58 +1,39 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f7f7f7;
-}
-
-.game-container {
     text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-.roulette {
-    margin: 20px;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #333;
-    overflow: hidden;
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-.wheel {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: center;
-    transition: transform 3s ease-out;
-}
-
-.sector {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eee;
-    border-left: 2px solid #ddd;
-    font-size: 20px;
-}
-
-button {
+.answers button {
+    display: block;
+    margin: 10px auto;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 1em;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #45a049;
+.timer {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.score {
+    font-size: 1.5em;
+    color: #28a745;
 }
