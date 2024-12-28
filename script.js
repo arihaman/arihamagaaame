@@ -15,6 +15,7 @@ let currentQuestion = 0;
 let score = 0;
 let time = 60;
 let incorrectQuestions = []; // 不正解のクイズを記録
+let timeOut = false; // 時間切れを判定するフラグ
 
 const questionEl = document.getElementById("question");
 const answersEl = document.getElementById("answers");
@@ -65,20 +66,27 @@ function startTimer() {
         timerEl.textContent = time;
         if (time <= 0) {
             clearInterval(timerInterval);
+            timeOut = true; // 時間切れを記録
             endGame();
         }
     }, 1000);
 }
 
 function endGame() {
-    if (incorrectQuestions.length === 0) {
+    if (timeOut) {
+        // 時間切れ時のメッセージ
+        questionEl.textContent = "ゲーム終了！もう一度挑戦してみてね。";
+        answersEl.innerHTML = "";
+        scoreEl.style.display = "block";
+        finalScoreEl.textContent = score;
+    } else if (incorrectQuestions.length === 0) {
         // 全問正解
-        questionEl.textContent = "おめでとうございます！全問正解です！🎉";
+        questionEl.textContent = "おめでとうございます！全問正解しました！🎉";
         answersEl.innerHTML = "";
         scoreEl.style.display = "block";
         finalScoreEl.textContent = score;
     } else {
-        // 終了時にまだ不正解があればメッセージ
+        // 不正解のクイズがある場合
         questionEl.textContent = "ゲーム終了！もう一度挑戦してみてね。";
         answersEl.innerHTML = "";
         scoreEl.style.display = "block";
