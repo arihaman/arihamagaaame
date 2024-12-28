@@ -1,22 +1,31 @@
+/* ベーススタイル */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #b5dee3; /* 背景色を明るい水色に変更 */
+    background-image: url('questionmark.jpg'); /* ハテナ模様の背景 */
+    background-repeat: repeat;
+    background-size: 800px 800px; /* パターンのサイズ */
     margin: 0;
     padding: 0;
+    color: #ffffff;
 }
 
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #ffffff; /* 白背景 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 少し強めのシャドウ */
+    position: relative;
 }
 
 .question {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 20px;
+    color: #11aec3; /* 濃いエメラルドグリーン */
+    font-weight: bold;
 }
 
 .answers button {
@@ -25,15 +34,58 @@ body {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #4c91af; /* グリーン */
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+.answers button:hover {
+    background: #684ff5; /* 濃いグリーン */
 }
 
 .timer {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
-    color: #ff0000;
+    color: #d32f2f; /* 赤みを増したカラー */
+    font-weight: bold;
 }
 
 .score {
+    font-size: 1.8em;
+    color: #38498e; /* 濃いグリーン */
+    margin-top: 20px;
+}
+
+.final-message {
     font-size: 1.5em;
-    color: #28a745;
+    margin-top: 30px;
+    color: #00796b;
+    font-weight: bold;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .question {
+        font-size: 1.5em;
+    }
+
+    .answers button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .timer {
+        font-size: 1.2em;
+    }
+
+    .score {
+        font-size: 1.5em;
+    }
 }
