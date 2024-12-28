@@ -8,7 +8,7 @@ const quizData = [
     { question: "リナの行ってみたい旅行先は？", answers: ["ハワイ", "スイス", "北海道"], correct: 2 },
     { question: "リナが一番好きな季節は？", answers: ["春", "秋", "冬"], correct: 2 },
     { question: "リナが飼いたいペットは？", answers: ["パグ", "ブルドッグ", "フレンチブルドッグ"], correct: 2 },
-    { question: "リナの今会いたい人は？", answers: ["饒波円", "藤井風", "菅田将暉"], correct: 0 },
+    { question: "リナの今会いたい人は？", answers: ["まどか", "藤井風", "菅田将暉"], correct: 0 },
 ];
 
 let currentQuestion = 0;
