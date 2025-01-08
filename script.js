@@ -1,5 +1,5 @@
 const quizData = [
-    { question: "ママのアレルギーは、なに？", answers: ["リンゴ", "キウイ", "マンゴー"], correct: 2 },
+    { question: "ママのアレルギーは、なに？", answers: ["リンゴ", "マンゴー", "キウイ"], correct: 1 },
     { question: "ママのすきなことは？", answers: ["だんす", "そうじ", "ビーズ"], correct: 2 },
     { question: "ママのすきなたべものは？", answers: ["エビ", "プリン", "マシュマロ"], correct: 0 },
     { question: "ママのきらいなたべものは？", answers: ["チョコレート", "てんぷら", "ぎょうざ"], correct: 1 },
