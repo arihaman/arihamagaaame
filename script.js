@@ -1,14 +1,14 @@
 const quizData = [
-    { question: "リナのアレルギーは何？", answers: ["リンゴ", "キウイ", "マンゴー"], correct: 2 },
-    { question: "リナの最近の趣味は？", answers: ["編み物", "料理", "ビーズ"], correct: 2 },
-    { question: "リナの今食べたいものは？", answers: ["エビ", "生春巻き", "焼きマシュマロ"], correct: 1 },
-    { question: "リナの好きな映画ジャンルは？", answers: ["ホラー", "コメディ", "ロマンス"], correct: 1 },
-    { question: "リナが最近ハマっている飲み物は？", answers: ["ソイラテ", "タピオカミルクティー", "抹茶ラテ"], correct: 0 },
-    { question: "リナが得意なスポーツは？", answers: ["バドミントン", "テニス", "そんなものはない"], correct: 2 },
-    { question: "リナの行ってみたい旅行先は？", answers: ["ハワイ", "スイス", "北海道"], correct: 2 },
-    { question: "リナが一番好きな季節は？", answers: ["春", "秋", "冬"], correct: 2 },
-    { question: "リナが飼いたいペットは？", answers: ["パグ", "ブルドッグ", "フレンチブルドッグ"], correct: 2 },
-    { question: "リナの今会いたい人は？", answers: ["まどか", "藤井風", "菅田将暉"], correct: 0 },
+    { question: "ママのアレルギーは、なに？", answers: ["リンゴ", "キウイ", "マンゴー"], correct: 2 },
+    { question: "ママのすきなことは？", answers: ["だんす", "そうじ", "ビーズ"], correct: 2 },
+    { question: "ママのすきなたべものは？", answers: ["エビ", "プリン", "マシュマロ"], correct: 0 },
+    { question: "ママのきらいなたべものは？", answers: ["チョコレート", "てんぷら", "ぎょうざ"], correct: 1 },
+    { question: "ママのすきなのみものは？", answers: ["コーヒー", "おちゃ", "りんごジュース"], correct: 0 },
+    { question: "ママがとくいなスポーツは？", answers: ["サッカー", "バスケ", "そんなものはない"], correct: 2 },
+    { question: "ママのすきないろは？", answers: ["あか", "ぴんく", "あお"], correct: 2 },
+    { question: "ママのすきなおすしは？", answers: ["たまご", "まぐろ", "イカ"], correct: 2 },
+    { question: "ママがすきなどうぶつは？", answers: ["うさぎ", "とり", "いぬ"], correct: 2 },
+    { question: "ママのいちばんのおともだちは？", answers: ["まどか", "はなこ", "たろう"], correct: 0 },
 ];
 
 let currentQuestion = 0;
@@ -30,7 +30,7 @@ function loadQuestion() {
             quizData.splice(0, quizData.length, ...incorrectQuestions);
             incorrectQuestions = [];
             currentQuestion = 0;
-            alert("全部正解するまで逃がさないよ");
+            alert("ぜんぶ、せいかいするまで、がんばって！");
             loadQuestion();
         } else {
             endGame();
@@ -75,19 +75,19 @@ function startTimer() {
 function endGame() {
     if (timeOut) {
         // 時間切れ時のメッセージ
-        questionEl.textContent = "ゲーム終了！もう一度挑戦してみてね。";
+        questionEl.textContent = "ゲームおしまい！またあそんでね。";
         answersEl.innerHTML = "";
         scoreEl.style.display = "block";
         finalScoreEl.textContent = score;
     } else if (incorrectQuestions.length === 0) {
         // 全問正解
-        questionEl.textContent = "おめでとうございます！全問正解しました！🎉";
+        questionEl.textContent = "おめでとうございます！ぜんぶ、せいかいです！🎉";
         answersEl.innerHTML = "";
         scoreEl.style.display = "block";
         finalScoreEl.textContent = score;
     } else {
         // 不正解のクイズがある場合
-        questionEl.textContent = "ゲーム終了！もう一度挑戦してみてね。";
+        questionEl.textContent = "ゲームおしまい！またあそんでね。";
         answersEl.innerHTML = "";
         scoreEl.style.display = "block";
         finalScoreEl.textContent = score;
