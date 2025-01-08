@@ -81,7 +81,7 @@ function endGame() {
         finalScoreEl.textContent = score;
     } else if (incorrectQuestions.length === 0) {
         // 全問正解
-        questionEl.textContent = "おめでとうございます！ぜんぶ、せいかいです！🎉";
+        questionEl.textContent = "おめでとうございます！/nぜんぶ、せいかいです！🎉";
         answersEl.innerHTML = "";
         scoreEl.style.display = "block";
         finalScoreEl.textContent = score;
